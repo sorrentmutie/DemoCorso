@@ -1,7 +1,17 @@
-using DemoCorso.UI.Client.Pages;
+using DemoCorso.Business;
+using DemoCorso.Core;
 using DemoCorso.UI.Components;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+var managePeople = new ManagePeople();
+managePeople.AddPerson(new Person
+{
+    Id = 1, FirstName = "Mario", LastName = "Rossi"
+});
+var people = managePeople.GetPeople();
+
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
