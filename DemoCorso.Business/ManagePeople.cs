@@ -20,6 +20,23 @@ public class ManagePeople : IPeopleData
                 FirstName = "John",
                 LastName = "Doe"
             });
+        people.Add( new Person         {
+            Id = 2,
+            FirstName = "Jane",
+            LastName = "Doe"
+        });
+        people.Add(new Person
+        {
+            Id = 3,
+            FirstName = "Mario",
+            LastName = "Rossi"
+        });
+        people.Add(new Person
+        {
+            Id = 4,
+            FirstName = "Maria",
+            LastName = "Verdi"
+        });
     }
 
     public List<Person>? GetPeople()
