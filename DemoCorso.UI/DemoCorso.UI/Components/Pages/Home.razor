@@ -1,7 +1,28 @@
 ﻿@page "/"
+@using DemoCorso.Core.Interfaces
+@using DemoCorso.Core
+@inject IPeopleData peopleData
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>@peopleData.GetSalute()</h1>
 
-Welcome to your new app.
+@if(people is not null)
+{
+    <ul>
+        @foreach (var person in people)
+        {
+            <li>@person.FirstName @person.LastName</li>
+        }
+    </ul>
+}
+
+@code  {
+    private List<Person>? people;
+
+    protected override void OnInitialized()
+    {
+       people = peopleData.GetPeople();
+    }
+}
+

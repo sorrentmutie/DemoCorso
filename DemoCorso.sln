@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCorso.UI", "DemoCorso.U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCorso.UI.Client", "DemoCorso.UI\DemoCorso.UI.Client\DemoCorso.UI.Client.csproj", "{DBB25471-0F8E-4A1E-B4AE-C5CA2A2BD48C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCorso.Data", "DemoCorso.Data\DemoCorso.Data.csproj", "{7D87CD3D-56AD-4D04-AA78-4667F12905AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DBB25471-0F8E-4A1E-B4AE-C5CA2A2BD48C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBB25471-0F8E-4A1E-B4AE-C5CA2A2BD48C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBB25471-0F8E-4A1E-B4AE-C5CA2A2BD48C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D87CD3D-56AD-4D04-AA78-4667F12905AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D87CD3D-56AD-4D04-AA78-4667F12905AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D87CD3D-56AD-4D04-AA78-4667F12905AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D87CD3D-56AD-4D04-AA78-4667F12905AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

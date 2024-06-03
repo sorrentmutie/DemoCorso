@@ -1,10 +1,26 @@
 ﻿using DemoCorso.Core;
+using DemoCorso.Core.Interfaces;
 
 namespace DemoCorso.Business;
 
-public class ManagePeople
+public class ManagePeople : IPeopleData
 {
+    private readonly ISalute? salute;
+
     private List<Person>? people { get; set; }
+
+    public ManagePeople(ISalute salute)
+    {
+        this.salute = salute;
+        people = new List<Person>();
+        people.Add(
+            new Person
+            {
+                Id = 1,
+                FirstName = "John",
+                LastName = "Doe"
+            });
+    }
 
     public List<Person>? GetPeople()
     {
@@ -39,4 +55,8 @@ public class ManagePeople
         }
     }
 
+    public string GetSalute()
+    {
+        return salute.GetSalute();
+    }
 }
