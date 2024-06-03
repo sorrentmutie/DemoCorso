@@ -3,6 +3,7 @@ using DemoCorso.Core;
 using DemoCorso.Core.Interfaces;
 using DemoCorso.Data;
 using DemoCorso.UI.Components;
+using DemoCorso.UI.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,11 @@ builder.Services.AddRazorComponents()
 //builder.Services.AddSingleton<IPeopleData, ManagePeople>();
 builder.Services.AddScoped<IPeopleData, ManagePeople>();
 builder.Services.AddScoped<ISalute, ManageStaticSalute>();
+//builder.Services.AddTransient<ISalute, ReadSaluteFromAppSettings>();
+
+
+////var salute = new ManageStaticSalute();
+////var managePeople = new ManagePeople(salute);
 
 
 //builder.Services.AddSingleton<IPeopleData, ManagePeopleOnSqlServer>();
