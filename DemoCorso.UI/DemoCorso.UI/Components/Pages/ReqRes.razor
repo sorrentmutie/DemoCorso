@@ -1,0 +1,46 @@
+﻿@page "/reqrespage"
+@using DemoCorso.Core.Interfaces
+@attribute [StreamRendering] 
+
+@inject IReqResData reqResData
+
+<h3>Pagina di accesso ai dati ReqRes</h3>
+
+@if(reqResResponse is not null)
+{
+   <p>Mi è arrivata la response</p>  
+   
+   @if(reqResResponse.Data is not null)
+   {
+       <p>Ho dei dati</p>
+        @foreach (var user in reqResResponse.Data)
+        {
+           <UserCard User="user"></UserCard>
+        }
+    }
+   else
+   {
+       <p>Non ho dati</p>
+   }
+
+}
+
+@if(showSpinner == true){
+<div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+}
+
+@code {
+
+    private ReqResResponse? reqResResponse;
+    private bool showSpinner = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        showSpinner = true;
+        reqResResponse = await reqResData.GetDataAsync();
+        showSpinner = false;
+    }
+
+}

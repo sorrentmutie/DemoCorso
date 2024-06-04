@@ -8,12 +8,16 @@ using DemoCorso.UI.Implementations;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents()
+   
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
 //builder.Services.AddSingleton<IPeopleData, ManagePeople>();
 builder.Services.AddScoped<IPeopleData, ManagePeople>();
 builder.Services.AddScoped<ISalute, ManageStaticSalute>();
+builder.Services.AddTransient<IClock, SystemClock>();
+builder.Services.AddScoped<IReqResData, ReqResDataHttp>();
+
 //builder.Services.AddTransient<ISalute, ReadSaluteFromAppSettings>();
 
 
@@ -41,6 +45,7 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
+
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()

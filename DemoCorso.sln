@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCorso.Core", "DemoCorso.Core\DemoCorso.Core.csproj", "{57BD53E1-C5A9-486F-BAD1-DB2F602B5D63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoCorso.Core", "DemoCorso.Core\DemoCorso.Core.csproj", "{57BD53E1-C5A9-486F-BAD1-DB2F602B5D63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCorso.Business", "DemoCorso.Business\DemoCorso.Business.csproj", "{B7C738C2-18EE-4850-B12B-16CA18716A65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoCorso.Business", "DemoCorso.Business\DemoCorso.Business.csproj", "{B7C738C2-18EE-4850-B12B-16CA18716A65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCorso.UI", "DemoCorso.UI\DemoCorso.UI\DemoCorso.UI.csproj", "{A5350E77-11E4-4804-B2E1-89C695FAFE9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoCorso.UI", "DemoCorso.UI\DemoCorso.UI\DemoCorso.UI.csproj", "{A5350E77-11E4-4804-B2E1-89C695FAFE9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCorso.UI.Client", "DemoCorso.UI\DemoCorso.UI.Client\DemoCorso.UI.Client.csproj", "{DBB25471-0F8E-4A1E-B4AE-C5CA2A2BD48C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoCorso.UI.Client", "DemoCorso.UI\DemoCorso.UI.Client\DemoCorso.UI.Client.csproj", "{DBB25471-0F8E-4A1E-B4AE-C5CA2A2BD48C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCorso.Data", "DemoCorso.Data\DemoCorso.Data.csproj", "{7D87CD3D-56AD-4D04-AA78-4667F12905AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoCorso.Data", "DemoCorso.Data\DemoCorso.Data.csproj", "{7D87CD3D-56AD-4D04-AA78-4667F12905AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

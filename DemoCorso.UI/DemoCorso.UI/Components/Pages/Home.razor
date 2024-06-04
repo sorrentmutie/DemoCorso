@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using DemoCorso.Business
 @using DemoCorso.Core.Interfaces
 @using DemoCorso.Core
 @inject IPeopleData peopleData
@@ -22,12 +23,13 @@
 
 @code  {
 
+
     private void AddPerson()
     {
         peopleData.AddPerson(new Person
             {
-                FirstName = "Salvatore",
-                LastName = "Arnone"
+                FirstName = "Luigi",
+                LastName = "Bianchi"
         });
         people = peopleData.GetPeople();
     }
@@ -36,7 +38,7 @@
 
     protected override void OnInitialized()
     {
-       people = peopleData.GetPeople();
+         people = peopleData.GetPeople();
     }
 }
 

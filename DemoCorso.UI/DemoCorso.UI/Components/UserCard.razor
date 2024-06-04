@@ -1,0 +1,13 @@
+﻿<div class="card" style="width: 18rem;">
+  <img src="@User?.Avatar" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">@User?.FirstName @User?.LastName</h5>
+    <p class="card-text">@User?.Email</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+@code {
+    [Parameter]
+    public User? User { get; set; }
+}
