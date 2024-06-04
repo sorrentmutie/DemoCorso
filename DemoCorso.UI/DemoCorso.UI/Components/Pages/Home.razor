@@ -2,10 +2,13 @@
 @using DemoCorso.Core.Interfaces
 @using DemoCorso.Core
 @inject IPeopleData peopleData
+@rendermode InteractiveServer
 
 <PageTitle>Home</PageTitle>
 
 <h1>@peopleData.GetSalute()</h1>
+
+<button class="btn btn-success" @onclick="AddPerson">Add Person</button>
 
 @if(people is not null)
 {
@@ -18,6 +21,17 @@
 }
 
 @code  {
+
+    private void AddPerson()
+    {
+        peopleData.AddPerson(new Person
+            {
+                FirstName = "Salvatore",
+                LastName = "Arnone"
+        });
+        people = peopleData.GetPeople();
+    }
+
     private List<Person>? people;
 
     protected override void OnInitialized()
